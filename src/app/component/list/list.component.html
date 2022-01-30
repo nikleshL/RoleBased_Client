@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-sm-3 mb-1.5 py-2" *ngFor="let charater of filteredCharacters">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Details</strong></h5>
+          <div class="card-text">
+            <span *ngIf="charater.name != '' && charater.name != 'NaN'">Name: {{charater.name}}</span>
+            <span *ngIf="charater.realm != '' && charater.realm != 'NaN'">Realm: {{charater.realm}}</span>
+            <span *ngIf="charater.race != '' && charater.race != 'NaN'">Race: {{charater.race}}</span>
+            <span *ngIf="charater.gender != '' && charater.gender != 'NaN'">Gender: {{charater.gender}}</span>
+            <span *ngIf="charater.birth != '' && charater.birth != 'NaN'">Birth: {{charater.birth}}</span>
+            <span *ngIf="charater.spouse != '' && charater.spouse != 'NaN'">Spouce: {{charater.spouse}}</span>
+            <span *ngIf="charater.death != '' && charater.death != 'NaN'">Death: {{charater.death}}</span>
+            <span *ngIf="charater.hair != '' && charater.hair != 'NaN'">Hair: {{charater.hair}}</span>
+            <span *ngIf="charater.height != '' && charater.height != 'NaN'">Height: {{charater.height}}</span>
+            <a *ngIf="charater.wikiUrl != '' && charater.wikiUrl != 'NaN'" target="_blank" href="{{charater.wikiUrl}}">Wiki</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

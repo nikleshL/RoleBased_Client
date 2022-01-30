@@ -1,0 +1,39 @@
+<form novalidate [formGroup]="form">
+<div class="row">
+    <div class="col-6">
+        <strong>Name: </strong>
+        <select class="form-control" formControlName="name" (change)="onChange($event.target.value)">
+            <option class='option' [value]="" [selected]="true">Select</option>
+            <option class='option' *ngFor='let option of filterData.name' [value]="option">
+                {{option}}
+            </option>
+        </select>
+    </div>
+    <div class="col-6">
+        <strong>Hair Color: </strong>
+        <select class="form-control" formControlName="hair" (change)="onChange($event.target.value)">
+            <option class='option' [value]="" [selected]="true">Select</option>
+            <option class='option' *ngFor='let option of filterData.hair' [value]="option">
+                {{option}}
+            </option>
+        </select>
+    </div>
+    <div class="col-6">
+        <strong>Gender: </strong>
+        <select class="form-control" formControlName="gender" (change)="onChange($event.target.value)">
+            <option class='option' [value]="" [selected]="true">Select</option>
+            <option class='option' *ngFor='let option of filterData.gender' [value]="option">
+                {{option}}
+            </option>
+        </select>
+    </div>
+    <div class="col-6">
+        <strong>Race: </strong>
+        <select class="form-control" formControlName="race" (change)="onChange($event.target.value)">
+            <option class='option' [value]="" [selected]="true">Select</option>
+            <option class='option' *ngFor='let option of filterData.race' [value]="option">
+                {{option}}
+            </option>
+        </select>
+    </div>
+</div>

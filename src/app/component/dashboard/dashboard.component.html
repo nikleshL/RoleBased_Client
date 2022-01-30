@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1>Lord of the Rings</h1>
+        </div>
+    </div>
+    <app-loader *ngIf="showLoader"></app-loader>
+    <ng-container *ngIf="isAuthorised && characterList.length > 0">
+        <div class="row mb-4">
+            <div class="col-12">
+                <app-filter (groupFilters)="filters = $event" [filterData]="filterData"></app-filter>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <app-list *ngIf="characterList.length > 0 " [groupFilters]="filters" [characterList]="characterList"></app-list>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isAuthorised">
+        <div class="row mb-4">
+            <div class="col-12">
+                <p>You are not authorised to view this page</p>
+            </div>
+        </div>
+    </ng-container>
+</div>
